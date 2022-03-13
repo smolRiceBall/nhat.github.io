@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Minh Nhat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="icon" type="image/png" sizes="16x16" href="ava.jpg">
+
+
+<div class="tab">
+	<button class="tabs active" onclick="showNewTab(event, 'home')">home</button>
+	<button class="tabs" onclick="showNewTab(event, 'resume')">resume</button>
+	<button class="tabs" onclick="showNewTab(event, 'blog')">thoughts</button>
+</div>
+
+
+
+<div id="home" class="body">
+<h1>I'm Minh Nhat</h1>
+<img src="ava.jpg">
+<div>I am a freshmen studying Computer Science at the University of Maryland, College Park.</div>
+<br>
+<div> I've worked on Parkinson's tremor stablizing watch, <br> <a href="https://github.com/minhnhatnguyen2003/level-of-depression" target = "_blank">prediction models on depression data,</a> <br> and recently <a href="https://share.streamlit.io/minhnhatnguyen2003/taylor-swift-lyrics-word-cloud-generator/main/app.py" target="_blank">fun data visualizations on Taylor Swift lyrics </a>using Pandas, Numpy and Streamlit to make interactive web apps. </div>
+<br>
+<div>I love cooking, eating, and spontaneous trips. </div>
+<br>
+</div>
+
+
+
+
+
+
+
+<div id="resume" class="body" >
+	<div><a href="https://www.linkedin.com/in/nhat-nguyen-2aba29213/">My Linkedin</a></div>
+	<div><a href="./Resume.pdf" target="_blank"></a>My resume</div>
+
+
+ </div>
+
+
+
+
+
+
+<div id="blog" class="body">
+	<div>
+		<h4>hehe sorri i dont have much here( ͡👁️ ͜ʖ ͡👁️)</h4>
+<!-- 		<h1 style="background-color: #D0B7A3">Things I learned in High School &#127979;</h1>
+		<h4>1. Don't be afraid to try things outside your major</h4>
+		<div>Being multidisciplinary is cool! More friends, new experiences, challenging and fun.</div>
+		<h4>2. Learn to identify big-mouths who are all talk but no work</h4>
+		<div>And try real hard not to become one. It's not good for your reputation.</div>
+		<h4>3. Networking is key</h4>
+		<h4>4. Booze is not an escape from your sorrows</h4>
+		<div>No matter how bad your life is going, if you ever intend to fill the void inside and chug on something to smoothe the pain, drink lots of cold orange juice.</div>
+	</div>
+	<br>
+	<div>
+		<h1 style="background-color: #D0B7A3">Lessons after 3 years in ViSEF 🔬</h4>
+		<h4>Some info & background</h4>
+			<li>ViSEF: Vietnamese Science and Engineering Fair</li>
+			<li>2018-2020, I was in the Research Team representing Le Hong Phong High School for the gifted</li>
+			<li>2019-2020, I won First Place in Software Development City Round against +2000 students </li>
+			<li>LƯỜI QUÁ KHÔNG BIẾT VIẾT GÌ THÊM AHHHHHHHHH ~~</li>
+		
+	</div> -->
+</div>
+
+
+
+<script>
+	
+
+var md = new MobileDetect(window.navigator.userAgent);
+if (md.mobile() || md.tablet()) {
+    document.location.href = 'mobile.html';
+}
+
+function showNewTab(event, newTab) {
+  var i, body, tabs;
+
+  body = document.getElementsByClassName("body");
+  for (i = 0; i < body.length; i++) {
+    body[i].style.display = "none";
+  }
+
+  tabs = document.getElementsByClassName("tabs");
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].className = tabs[i].className.replace(" active", "");
+  }
+
+  document.getElementById(newTab).style.display = "block";
+  event.currentTarget.className += " active";
+}
+
+
+</script>
+
+</body>
+</html>
